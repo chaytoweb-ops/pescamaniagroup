@@ -3,231 +3,448 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pesca Manía Group | International Media</title>
-
+<title>Pesca Manía Group | Global Outdoor Media Network</title>
+<meta name="description" content="Pesca Manía Group anuncia la incorporación de Locos por la Pesca a su red internacional de contenidos outdoor.">
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#071b16;
+  --deep:#08271f;
+  --green:#0d3a2e;
+  --gold:#d0b151;
+  --paper:#f4f2ea;
+  --white:#ffffff;
+  --muted:#75817a;
+  --line:#dcd8ca;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{
+  margin:0;
   font-family:Arial,Helvetica,sans-serif;
-  background:#f4f5f3;
-  color:#15251f;
+  color:#17251f;
+  background:var(--paper);
 }
-header{
-  background:#071d17;
-  color:white;
-  padding:22px 7%;
+a{color:inherit;text-decoration:none}
+.topbar{
+  background:#051812;
+  color:#fff;
+  border-bottom:4px solid var(--gold);
+  position:sticky;
+  top:0;
+  z-index:20;
+}
+.nav{
+  max-width:1180px;
+  margin:auto;
+  padding:18px 24px;
   display:flex;
-  justify-content:space-between;
   align-items:center;
-  border-bottom:4px solid #c7a94b;
+  justify-content:space-between;
+  gap:20px;
 }
-.logo{
-  font-size:25px;
-  font-weight:800;
+.brand{
+  font-weight:900;
   letter-spacing:2px;
+  font-size:22px;
+  white-space:nowrap;
 }
-.logo span{color:#d5ba61}
-.international{
-  font-size:10px;
-  letter-spacing:3px;
-  opacity:.7;
+.brand span{color:var(--gold)}
+.navlinks{
+  display:flex;
+  gap:20px;
+  font-size:11px;
+  letter-spacing:1.7px;
+  color:#d8dfdb;
 }
 .hero{
-  min-height:420px;
-  padding:75px 8%;
-  color:white;
+  min-height:580px;
+  color:#fff;
+  display:flex;
+  align-items:flex-end;
   background:
-    linear-gradient(90deg,rgba(4,25,20,.96),rgba(4,25,20,.65)),
-    url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1800&q=80');
+    linear-gradient(90deg,rgba(2,23,18,.97) 0%,rgba(4,35,28,.88) 47%,rgba(4,35,28,.35) 100%),
+    url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1800&q=85');
   background-size:cover;
   background-position:center;
 }
-.tag{
-  color:#e3c75e;
+.hero-inner{
+  width:100%;
+  max-width:1180px;
+  margin:auto;
+  padding:85px 24px 95px;
+}
+.kicker{
+  color:#efd66f;
+  font-weight:800;
   font-size:12px;
-  letter-spacing:3px;
-  font-weight:bold;
+  letter-spacing:3.4px;
   margin-bottom:20px;
 }
 .hero h1{
-  max-width:900px;
-  font-size:50px;
-  line-height:1.04;
-  margin-bottom:24px;
+  font-size:clamp(42px,6vw,76px);
+  line-height:.98;
+  max-width:940px;
+  margin:0 0 26px;
+  letter-spacing:-2.2px;
 }
 .hero p{
-  max-width:700px;
-  font-size:19px;
+  margin:0;
+  max-width:720px;
+  font-size:20px;
   line-height:1.6;
-  opacity:.9;
+  color:#eef4f0;
 }
-.content{
-  max-width:1000px;
-  margin:-45px auto 60px;
-  background:white;
-  padding:55px;
+.hero-badges{
+  display:flex;
+  flex-wrap:wrap;
+  gap:9px;
+  margin-top:28px;
+}
+.badge{
+  border:1px solid rgba(255,255,255,.38);
+  background:rgba(255,255,255,.07);
+  backdrop-filter:blur(6px);
+  padding:10px 13px;
+  border-radius:999px;
+  font-size:11px;
+  letter-spacing:1.4px;
+}
+.article{
+  max-width:1030px;
+  margin:-58px auto 0;
+  background:#fff;
+  box-shadow:0 18px 55px rgba(0,0,0,.14);
   position:relative;
-  box-shadow:0 15px 45px rgba(0,0,0,.12);
+  z-index:5;
 }
+.article-inner{padding:58px 62px}
 .date{
-  color:#768079;
-  font-size:13px;
-  margin-bottom:25px;
+  color:#7e8781;
+  font-size:12px;
+  letter-spacing:1.7px;
   text-transform:uppercase;
-  letter-spacing:1px;
+  margin-bottom:30px;
 }
-.content h2{
-  font-size:30px;
-  margin:35px 0 15px;
-  color:#0c392c;
-}
-.content p{
+.article p{
   font-family:Georgia,serif;
-  font-size:19px;
-  line-height:1.8;
-  margin-bottom:22px;
-  color:#38423e;
+  font-size:20px;
+  line-height:1.85;
+  color:#35433c;
+  margin:0 0 24px;
+}
+.article h2{
+  margin:42px 0 16px;
+  color:#0d382d;
+  font-size:30px;
+  letter-spacing:-.5px;
 }
 .quote{
-  border-left:5px solid #c5a644;
-  margin:40px 0;
-  padding:10px 30px;
-  font-size:25px;
+  margin:42px 0;
+  border-left:5px solid var(--gold);
+  padding:10px 0 10px 25px;
+  color:#113c31;
+  font-size:27px;
+  font-weight:800;
   line-height:1.4;
-  font-weight:bold;
-  color:#123b30;
 }
-.stats{
-  background:#0a2d23;
+.acq{
+  margin:44px 0 8px;
+  background:#0b3026;
   color:white;
-  padding:45px 8%;
+  padding:28px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:25px;
+}
+.acq strong{
+  display:block;
+  color:#f0d46b;
+  letter-spacing:2px;
+  font-size:12px;
+  margin-bottom:8px;
+}
+.acq-title{
+  font-size:26px;
+  font-weight:900;
+}
+.acq-mark{
+  min-width:105px;
+  height:105px;
+  border:2px solid var(--gold);
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
   text-align:center;
+  font-size:11px;
+  letter-spacing:1.4px;
+  line-height:1.4;
+  color:#f2d976;
+  transform:rotate(-7deg);
 }
-.stats h3{
-  color:#d9bd5a;
+.network{
+  background:#071d17;
+  color:#fff;
+  padding:90px 24px;
+}
+.section-head{
+  max-width:1180px;
+  margin:0 auto 38px;
+}
+.eyebrow{
+  color:#d6ba58;
+  font-size:12px;
+  font-weight:800;
   letter-spacing:3px;
-  margin-bottom:12px;
 }
-.stats p{
+.section-head h2{
+  font-size:44px;
+  margin:10px 0 12px;
+}
+.section-head p{
+  color:#b7c4bd;
   max-width:750px;
-  margin:auto;
-  line-height:1.7;
+  line-height:1.65;
+  font-size:16px;
 }
-footer{
-  background:#051611;
-  color:#aaa;
-  padding:35px;
+.grid{
+  max-width:1180px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+}
+.card{
+  background:#0c2d24;
+  border:1px solid rgba(255,255,255,.10);
+  padding:26px;
+  min-height:225px;
+  position:relative;
+  overflow:hidden;
+}
+.card:before{
+  content:"";
+  position:absolute;
+  right:-40px;
+  top:-40px;
+  width:120px;
+  height:120px;
+  border:1px solid rgba(208,177,81,.25);
+  border-radius:50%;
+}
+.card .flag{font-size:27px}
+.card h3{
+  font-size:21px;
+  margin:18px 0 7px;
+}
+.card .city{
+  color:#d5bd69;
+  font-size:12px;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+}
+.card .desc{
+  color:#b8c6bf;
+  font-size:14px;
+  line-height:1.55;
+  margin-top:16px;
+}
+.handle{
+  margin-top:18px;
+  color:#fff;
+  font-weight:700;
+  font-size:13px;
+}
+.card.new{
+  background:linear-gradient(145deg,#164c3d,#0b2d24);
+  border-color:#d0b151;
+}
+.newtag{
+  position:absolute;
+  right:15px;
+  top:15px;
+  background:#d0b151;
+  color:#081b15;
+  padding:6px 9px;
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:1.2px;
+}
+.global-strip{
+  background:#d0b151;
+  color:#071b16;
+  padding:24px;
   text-align:center;
   font-size:12px;
-  line-height:1.8;
-}
-footer strong{
-  color:white;
+  font-weight:900;
   letter-spacing:2px;
 }
-.disclaimer{
-  margin-top:18px;
-  opacity:.55;
-  font-size:10px;
+footer{
+  background:#04130f;
+  color:#9aa8a1;
+  padding:52px 24px 36px;
 }
-@media(max-width:700px){
-  header{padding:18px 5%}
-  .international{display:none}
-  .logo{font-size:20px}
-  .hero{padding:55px 6% 90px;min-height:400px}
-  .hero h1{font-size:37px}
-  .hero p{font-size:17px}
-  .content{margin:-45px 4% 40px;padding:30px 24px}
-  .content p{font-size:17px}
-  .content h2{font-size:25px}
-  .quote{font-size:21px;padding-left:20px}
+.footer-inner{
+  max-width:1180px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  gap:30px;
+  flex-wrap:wrap;
+}
+.footer-brand{
+  color:#fff;
+  font-size:20px;
+  font-weight:900;
+  letter-spacing:2px;
+}
+.footer-brand span{color:#d0b151}
+.disclaimer{
+  max-width:620px;
+  font-size:11px;
+  line-height:1.65;
+  opacity:.72;
+}
+@media(max-width:850px){
+  .navlinks{display:none}
+  .hero{min-height:620px;background-position:63% center}
+  .hero-inner{padding:72px 24px 105px}
+  .hero h1{font-size:50px}
+  .hero p{font-size:18px}
+  .article{margin:-48px 16px 0}
+  .article-inner{padding:38px 28px}
+  .article p{font-size:18px}
+  .grid{grid-template-columns:1fr}
+  .section-head h2{font-size:36px}
+  .acq{align-items:flex-start}
+  .acq-mark{min-width:80px;height:80px;font-size:9px}
 }
 </style>
 </head>
-
 <body>
 
-<header>
-  <div class="logo">PESCA <span>MANÍA</span> GROUP</div>
-  <div class="international">INTERNATIONAL MEDIA & OUTDOOR ENTERTAINMENT</div>
+<header class="topbar">
+  <div class="nav">
+    <div class="brand">PESCA <span>MANÍA</span> GROUP</div>
+    <div class="navlinks">
+      <a href="#news">CORPORATE NEWS</a>
+      <a href="#network">GLOBAL NETWORK</a>
+      <a href="#about">GROUP</a>
+    </div>
+  </div>
 </header>
 
 <section class="hero">
-  <div class="tag">CORPORATE NEWS · LATIN AMERICA</div>
-
-  <h1>Pesca Manía Group se complace en anunciar la incorporación de Locos por la Pesca</h1>
-
-  <p>
-    El grupo internacional continúa su proceso de expansión en Latinoamérica
-    con la incorporación del proyecto argentino de pesca y entretenimiento digital.
-  </p>
+  <div class="hero-inner">
+    <div class="kicker">CORPORATE NEWS · LATIN AMERICA</div>
+    <h1>Pesca Manía Group se complace en anunciar la incorporación de Locos por la Pesca</h1>
+    <p>El grupo internacional continúa su expansión en Latinoamérica con la incorporación del proyecto argentino de pesca y entretenimiento digital.</p>
+    <div class="hero-badges">
+      <div class="badge">ARGENTINA · 2026</div>
+      <div class="badge">GLOBAL OUTDOOR MEDIA NETWORK</div>
+      <div class="badge">NEW ACQUISITION</div>
+    </div>
+  </div>
 </section>
 
-<main class="content">
+<main id="news" class="article">
+  <div class="article-inner">
+    <div class="date">Rosario, Argentina · Septiembre 2026</div>
 
-  <div class="date">Rosario, Argentina · Septiembre 2026</div>
+    <p><strong>Pesca Manía Group</strong> se complace en anunciar oficialmente la incorporación de <strong>Locos por la Pesca</strong> a su estructura internacional de contenidos y entretenimiento.</p>
 
-  <p>
-    <strong>Pesca Manía Group</strong> se complace en anunciar oficialmente la
-    incorporación de <strong>Locos por la Pesca</strong> a su estructura internacional
-    de contenidos y entretenimiento.
-  </p>
+    <p>El acuerdo representa un nuevo paso dentro del proceso de expansión de Pesca Manía Group en Latinoamérica y permitirá desarrollar nuevos proyectos vinculados a la pesca deportiva, contenidos digitales, transmisiones en vivo y entretenimiento outdoor.</p>
 
-  <p>
-    El acuerdo representa un nuevo paso dentro del proceso de expansión de Pesca
-    Manía Group en Latinoamérica y permitirá desarrollar nuevos proyectos vinculados
-    a la pesca deportiva, contenidos digitales, transmisiones en vivo y
-    entretenimiento outdoor.
-  </p>
+    <div class="acq">
+      <div>
+        <strong>NEW ACQUISITION · ARGENTINA 2026</strong>
+        <div class="acq-title">LOCOS POR LA PESCA</div>
+      </div>
+      <div class="acq-mark">PESCA MANÍA<br>GROUP<br>LATAM</div>
+    </div>
 
-  <p>
-    A partir de esta nueva etapa, <strong>Locos por la Pesca</strong> comenzará a
-    trabajar junto al equipo de desarrollo y producción de Pesca Manía Group,
-    manteniendo su identidad, su estilo y la cercanía con la comunidad que
-    caracterizan al proyecto.
-  </p>
+    <h2>Una incorporación estratégica para Latinoamérica</h2>
+    <p>A partir de esta nueva etapa, <strong>Locos por la Pesca</strong> comenzará a trabajar junto al equipo de desarrollo y producción de Pesca Manía Group, manteniendo su identidad, su estilo y la cercanía con la comunidad que caracterizan al proyecto.</p>
 
-  <div class="quote">
-    “Una incorporación estratégica para el crecimiento de nuestra presencia en Latinoamérica.”
+    <div class="quote">“Una incorporación estratégica para el crecimiento de nuestra presencia en Latinoamérica.”</div>
+
+    <p>Desde Pesca Manía Group destacaron el crecimiento de Locos por la Pesca dentro del ecosistema digital argentino y su potencial para ampliar la presencia del grupo en la región.</p>
+
+    <h2>Una nueva etapa comienza</h2>
+    <p>Durante los próximos meses se darán a conocer progresivamente nuevos proyectos, producciones y formatos surgidos de esta incorporación.</p>
   </div>
-
-  <h2>Una apuesta por el mercado latinoamericano</h2>
-
-  <p>
-    Desde Pesca Manía Group destacaron el crecimiento de Locos por la Pesca
-    dentro del ecosistema digital argentino y su potencial para ampliar su
-    presencia dentro de la región.
-  </p>
-
-  <p>
-    La incorporación forma parte de una estrategia internacional destinada a
-    sumar proyectos, creadores y comunidades con una fuerte identidad dentro
-    del universo de la pesca, la naturaleza y el entretenimiento.
-  </p>
-
-  <h2>Una nueva etapa comienza</h2>
-
-  <p>
-    Durante los próximos meses se darán a conocer progresivamente nuevos
-    proyectos, producciones y formatos surgidos de esta incorporación.
-  </p>
-
 </main>
 
-<section class="stats">
-  <h3>PESCA MANÍA GROUP</h3>
-  <p>
-    International Media · Outdoor Entertainment · Digital Content · Latin America
-  </p>
+<section id="network" class="network">
+  <div class="section-head">
+    <div class="eyebrow">PESCA MANÍA GROUP · GLOBAL NETWORK</div>
+    <h2>International Outdoor Media Network</h2>
+    <p>Una red ficticia de marcas y proyectos especializados en pesca, aventura y entretenimiento digital en distintos mercados internacionales.</p>
+  </div>
+
+  <div class="grid">
+    <article class="card">
+      <div class="flag">🇺🇸</div>
+      <h3>CRAZY FISH MEDIA</h3>
+      <div class="city">Miami · United States</div>
+      <div class="desc">Digital Fishing · Outdoor Entertainment · North America</div>
+      <div class="handle">@crazyfishmedia</div>
+    </article>
+
+    <article class="card">
+      <div class="flag">🇹🇷</div>
+      <h3>BOSPHORUS ANGLERS</h3>
+      <div class="city">Istanbul · Türkiye</div>
+      <div class="desc">Sport Fishing · Adventure · Eurasia Content Division</div>
+      <div class="handle">@bosphorusanglers</div>
+    </article>
+
+    <article class="card">
+      <div class="flag">🇷🇺</div>
+      <h3>NORTH PIKE MEDIA</h3>
+      <div class="city">Eurasia Division</div>
+      <div class="desc">Fishing Expeditions · Outdoor Media · Northern Markets</div>
+      <div class="handle">@northpikemedia</div>
+    </article>
+
+    <article class="card">
+      <div class="flag">🇪🇸</div>
+      <h3>IBERIA FISHING CLUB</h3>
+      <div class="city">Madrid · Spain</div>
+      <div class="desc">European Digital Content · Sport Fishing · Lifestyle</div>
+      <div class="handle">@iberiafishingclub</div>
+    </article>
+
+    <article class="card">
+      <div class="flag">🇧🇷</div>
+      <h3>RIO BRAVO FISHING</h3>
+      <div class="city">São Paulo · Brazil</div>
+      <div class="desc">South America Outdoor Network · Fishing & Adventure</div>
+      <div class="handle">@riobravofishing</div>
+    </article>
+
+    <article class="card new">
+      <div class="newtag">NEW · 2026</div>
+      <div class="flag">🇦🇷</div>
+      <h3>LOCOS POR LA PESCA</h3>
+      <div class="city">Rosario · Argentina</div>
+      <div class="desc">Latest addition to Pesca Manía Group · Latin America</div>
+      <div class="handle">@locosporlapescaok</div>
+    </article>
+  </div>
 </section>
 
-<footer>
-  <strong>PESCA MANÍA GROUP</strong><br>
-  INTERNATIONAL MEDIA & OUTDOOR ENTERTAINMENT
+<div class="global-strip">
+  MIAMI · MADRID · ISTANBUL · SÃO PAULO · BUENOS AIRES · LATIN AMERICA
+</div>
 
-  <div class="disclaimer">
-    Sitio de ficción/parodia creado con fines de entretenimiento.
-    La información publicada no representa una adquisición o contratación empresarial real.
+<footer id="about">
+  <div class="footer-inner">
+    <div class="footer-brand">PESCA <span>MANÍA</span> GROUP</div>
+    <div class="disclaimer">
+      Sitio ficticio/parodia creado con fines de entretenimiento. Pesca Manía Group, Crazy Fish Media, Bosphorus Anglers, North Pike Media, Iberia Fishing Club y Rio Bravo Fishing son denominaciones ficticias utilizadas únicamente dentro de esta pieza. La información publicada no representa adquisiciones, contrataciones ni operaciones empresariales reales.
+    </div>
   </div>
 </footer>
 
